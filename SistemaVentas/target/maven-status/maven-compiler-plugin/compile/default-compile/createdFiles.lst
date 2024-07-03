@@ -40,6 +40,7 @@ com\dev_team\controllers\GestionUsuarioController$2.class
 com\dev_team\controllers\GestionProveedorController.class
 com\dev_team\models\Venta.class
 com\dev_team\views\D_AdmiLaptop$4.class
+com\dev_team\controllers\LaptopController.class
 com\dev_team\views\D_AdmUsuario$3.class
 com\dev_team\controllers\RegistrarProductoController$1.class
 com\dev_team\dashboard\menu\Item$1.class

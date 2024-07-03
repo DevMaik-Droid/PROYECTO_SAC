@@ -225,9 +225,9 @@ public class V_RegistrarLaptop extends JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_buscarLP;
-    private javax.swing.JButton btn_registrarLP;
-    private javax.swing.JLabel jLabel10;
+    protected javax.swing.JButton btn_buscarLP;
+    protected javax.swing.JButton btn_registrarLP;
+    protected javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -244,15 +244,15 @@ public class V_RegistrarLaptop extends JPanel {
     private javax.swing.JPanel panelTitle;
     private javax.swing.JPanel panel_form;
     private javax.swing.JPanel panel_main;
-    private javax.swing.JTextArea ta_descripcionLaptop;
-    private javax.swing.JTextField tf_almacenamiento;
-    private javax.swing.JTextField tf_bateriaLP;
-    private javax.swing.JTextField tf_conectividadLP1;
-    private javax.swing.JTextField tf_marca;
-    private javax.swing.JTextField tf_memoriaRam;
-    private javax.swing.JTextField tf_modeloLP;
-    private javax.swing.JTextField tf_pantallaLP;
-    private javax.swing.JTextField tf_procesador;
-    private javax.swing.JTextField tf_tarjetaGrafica;
+    protected javax.swing.JTextArea ta_descripcionLaptop;
+    protected javax.swing.JTextField tf_almacenamiento;
+    protected javax.swing.JTextField tf_bateriaLP;
+    protected javax.swing.JTextField tf_conectividadLP1;
+    protected javax.swing.JTextField tf_marca;
+    protected javax.swing.JTextField tf_memoriaRam;
+    protected javax.swing.JTextField tf_modeloLP;
+    protected javax.swing.JTextField tf_pantallaLP;
+    protected javax.swing.JTextField tf_procesador;
+    protected javax.swing.JTextField tf_tarjetaGrafica;
     // End of variables declaration//GEN-END:variables
 }
