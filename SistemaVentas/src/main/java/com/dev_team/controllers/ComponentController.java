@@ -144,9 +144,7 @@ public class ComponentController extends V_RegistrarComponentes {
     }
     
     private static String generarClave() {
-
         return "C" + String.valueOf(Math.round(Math.random() * 10000)) + "E";
-
     }
 
 }
