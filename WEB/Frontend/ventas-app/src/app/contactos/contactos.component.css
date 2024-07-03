@@ -1,0 +1,9 @@
+.header {
+    background-position: center; /* Centra el fondo */
+    width: 100%; /* Ajusta según tu necesidad */
+    height: 60vh; /* Ajusta según tu necesidad */
+    background-color:#0E0915;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
