@@ -53,7 +53,7 @@ public class V_RegistrarComponentes extends JPanel{
         cbx_velocidad = new javax.swing.JComboBox<>();
         cbx_capacidad = new javax.swing.JComboBox<>();
         jLabel20 = new javax.swing.JLabel();
-        tf_precioTotal1 = new javax.swing.JTextField();
+        tf_clave = new javax.swing.JTextField();
         panelTitle = new PanelGradient(Color.MAGENTA,Color.red);
         jLabel15 = new javax.swing.JLabel();
 
@@ -87,22 +87,22 @@ public class V_RegistrarComponentes extends JPanel{
         lb_1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         lb_1.setForeground(Main_Colores.C_100);
         lb_1.setText("Marca:");
-        panel_form.add(lb_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        panel_form.add(lb_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         lb_2.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         lb_2.setForeground(Main_Colores.C_100);
         lb_2.setText("Modelo:");
-        panel_form.add(lb_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 100, -1, -1));
+        panel_form.add(lb_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
 
         lb_3.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         lb_3.setForeground(Main_Colores.C_100);
         lb_3.setText("Capacidad:");
-        panel_form.add(lb_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        panel_form.add(lb_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
 
         lb_4.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         lb_4.setForeground(Main_Colores.C_100);
         lb_4.setText("Velocidad:");
-        panel_form.add(lb_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, -1, -1));
+        panel_form.add(lb_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, -1, -1));
 
         ta_descripcion.setColumns(20);
         ta_descripcion.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
@@ -132,29 +132,29 @@ public class V_RegistrarComponentes extends JPanel{
 
         tf_marca.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         tf_marca.setForeground(Main_Colores.Fondo);
-        panel_form.add(tf_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 140, 30));
+        panel_form.add(tf_marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 140, 30));
 
         tf_modelo.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         tf_modelo.setForeground(Main_Colores.Fondo);
-        panel_form.add(tf_modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 270, 30));
+        panel_form.add(tf_modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 270, 30));
 
         cbx_velocidad.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         cbx_velocidad.setForeground(Main_Colores.Fondo);
-        panel_form.add(cbx_velocidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 210, 30));
+        panel_form.add(cbx_velocidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 270, 210, 30));
 
         cbx_capacidad.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         cbx_capacidad.setForeground(Main_Colores.Fondo);
-        panel_form.add(cbx_capacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 220, 30));
+        panel_form.add(cbx_capacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 220, 30));
 
         jLabel20.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         jLabel20.setForeground(Main_Colores.C_100);
         jLabel20.setText("Clave:");
         panel_form.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 130, -1));
 
-        tf_precioTotal1.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        tf_precioTotal1.setForeground(Main_Colores.Fondo);
-        tf_precioTotal1.setEnabled(false);
-        panel_form.add(tf_precioTotal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 140, 30));
+        tf_clave.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        tf_clave.setForeground(Main_Colores.Fondo);
+        tf_clave.setEnabled(false);
+        panel_form.add(tf_clave, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, 140, 30));
 
         panelTitle.setBackground(new java.awt.Color(51, 51, 255));
         panelTitle.setPreferredSize(new java.awt.Dimension(40, 40));
@@ -221,8 +221,8 @@ public class V_RegistrarComponentes extends JPanel{
     private javax.swing.JPanel panel_form;
     private javax.swing.JPanel panel_main;
     protected javax.swing.JTextArea ta_descripcion;
+    protected javax.swing.JTextField tf_clave;
     protected javax.swing.JTextField tf_marca;
     protected javax.swing.JTextField tf_modelo;
-    protected javax.swing.JTextField tf_precioTotal1;
     // End of variables declaration//GEN-END:variables
 }

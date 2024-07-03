@@ -15,4 +15,5 @@ public class Accesorios {
     private InputStream imagen;
     private String descripcion;
     private Date fechaRegistro;
+    private Long idProveedor;
 }

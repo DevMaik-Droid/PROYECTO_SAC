@@ -80,7 +80,6 @@ com\dev_team\views\V_Login$9.class
 com\dev_team\controllers\ProveedorController.class
 com\dev_team\views\D_AdmiComputadoras.class
 com\dev_team\models\Cliente.class
-com\dev_team\views\D_AdmUsuario$5.class
 com\dev_team\views\D_AdmiAccesorios.class
 com\dev_team\views\V_Ventas$1.class
 com\dev_team\utilidades\GradientSeparador.class
@@ -110,7 +109,6 @@ com\dev_team\controllers\VentasController.class
 com\dev_team\views\V_GestionarProveedores.class
 com\dev_team\dashboard\Vista_Dashboard.class
 com\dev_team\views\D_AdmiLaptop$1.class
-com\dev_team\controllers\AccesorioController$1.class
 com\dev_team\dashboard\Vista_Dashboard$2.class
 com\dev_team\views\V_RegistrarAccesorios.class
 com\dev_team\services\Service_Cliente.class

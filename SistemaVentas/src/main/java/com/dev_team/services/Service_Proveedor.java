@@ -62,18 +62,21 @@ public class Service_Proveedor implements I_Service{
      // metodo para actualizar un proveedor
    
     @Override
-    public boolean actualizar(Object objeto, String idProveedor) {
+    public boolean actualizar(Object objeto) {
         boolean respuesta = false;
         Connection cn = Conexion.conectar();
         Proveedor pr = (Proveedor) objeto;
         try {
 
-            PreparedStatement consulta = cn.prepareStatement("update tb_proveedor set proveedor=?, contacto = ?, email = ?, direccion= ?, observaciones = ?  where idProveedor ='" + idProveedor + "'");
-            consulta.setString(1, pr.getEmpresa());
-            consulta.setString(2, pr.getContacto());
-            consulta.setString(3, pr.getEmail());
-            consulta.setString(4, pr.getDireccion());
-            consulta.setString(5, pr.getObservaciones());   
+            PreparedStatement consulta = cn.prepareStatement("update tb_proveedor set proveedor=?,empresa=?, telefono = ?, email = ?, direccion= ?, productoSum=?, estado=?  where idProveedor ='" + pr.getIdProveedor() + "'");
+            consulta.setString(1, pr.getProveedor());
+            consulta.setString(2, pr.getEmpresa());
+            consulta.setString(3, pr.getContacto());
+            consulta.setString(4, pr.getEmail());
+            consulta.setString(5, pr.getDireccion());
+            consulta.setString(6, pr.getProductoSuministrado());
+            consulta.setString(7, pr.getEstado());
+            
 
             if (consulta.executeUpdate() > 0) {
                 respuesta = true;

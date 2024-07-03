@@ -68,10 +68,11 @@ public class ProveedorController extends V_RegistrarProveedor {
     }
 
     private void LimpiarCampos() {
-        JTextField[] tfs = {tf_contacto, tf_direccion, tf_email, tf_proveedor};
+        JTextField[] tfs = {tf_contacto, tf_direccion, tf_email, tf_proveedor, tf_empresa};
         for (JTextField f : tfs) {
             f.setText("");
         }
         cbx_productoSuministrado.setSelectedIndex(0);
+        ta_informacionAdicional.setText("");
     }
 }

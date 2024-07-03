@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -56,6 +57,7 @@ public class UsuarioController extends V_RegistrarUsuario {
                     usuario.setNivel(cbx_nivel.getSelectedItem().toString());
                     if(service_Usuario.crear(usuario)){
                         JOptionPane.showMessageDialog(null, "Usuario Registrado");
+                        limpiarCampos();
                     }else{
                         JOptionPane.showMessageDialog(null, "Error al registrar.");
                     }
@@ -124,6 +126,16 @@ public class UsuarioController extends V_RegistrarUsuario {
         } catch (IOException | IllegalArgumentException ex) {
             System.out.println("No se seleciono la imagen");
         }
+    }
+    
+    private void limpiarCampos(){
+        JTextField tfs[] = {tf_nombre,tf_ci,tf_direccion,tf_usuario,tf_telefono,tf_apellido};
+        Arrays.stream(tfs).forEach(t -> t.setText(""));
+        pf_confPassword.setText("");
+        pf_password.setText("");
+        ta_observaciones.setText("");
+        cbx_nivel.setSelectedIndex(0);
+        lb_foto.setIcon(null);
     }
 
 }

@@ -53,38 +53,10 @@ public class ComponentController extends V_RegistrarComponentes {
         cbx_componente.addActionListener(c -> {
             String componente = cbx_componente.getSelectedItem().toString();
             actualizarComponentes(componente);
-
+            tf_clave.setText(generarClave());
         });
 
-        /*tf_cantidad.getDocument().addDocumentListener(new DocumentListener() {
-            @Override
-            public void insertUpdate(DocumentEvent e) {
-                tf_precioTotal.setText(calcularPrecioTotal());
-            }
-
-            @Override
-            public void removeUpdate(DocumentEvent e) {
-                tf_precioTotal.setText(calcularPrecioTotal());
-            }
-
-            @Override
-            public void changedUpdate(DocumentEvent e) {
-
-            }
-
-        });*/
-
     }
-
-    /*private String calcularPrecioTotal() {
-        if (!tf_precioUnitario.getText().isEmpty()) {
-            double precioUnitario = Double.parseDouble(tf_precioUnitario.getText());
-            double cantidad = Double.parseDouble(tf_cantidad.getText());
-            return String.valueOf(precioUnitario * cantidad);
-        } else {
-            return "";
-        }
-    }*/
 
 
     private void actualizarComponentes(String componente) {
@@ -128,15 +100,12 @@ public class ComponentController extends V_RegistrarComponentes {
         Componente componente = new Componente();
         Producto producto = new Producto();
         
-        String clave = Utilidad.generarClave(cbx_componente.getSelectedItem().toString());
-        
         Service_Componente service = new Service_Componente();
-        Service_Producto service_Producto = new Service_Producto();
 
         componente.setNombre(cbx_componente.getSelectedItem().toString());
         componente.setMarca(tf_marca.getText().trim().toUpperCase());
         componente.setModelo(tf_modelo.getText().trim().toUpperCase());
-        componente.setClave(clave);
+        componente.setClave(tf_clave.getText());
         String capacidad = "";
         String velocidad = "";
         
@@ -148,13 +117,9 @@ public class ComponentController extends V_RegistrarComponentes {
         componente.setVelocidad(velocidad);
         componente.setImagen(input_image);
         componente.setDescripcion(ta_descripcion.getText().trim());
-        producto.setIdUsuario(3L);
 
         if (service.crear(componente)) {
-            
-            if(service_Producto.crear(producto)){
-                Utilidad.mostrarMensaje("Componente Creado");
-            }
+            Utilidad.mostrarMensaje("Componente Creado");
             limpiar();
         } else {
             mostrarMensaje("Error en registrar componente");
@@ -162,55 +127,26 @@ public class ComponentController extends V_RegistrarComponentes {
 
     }
 
-    
     private void limpiar() {
         tf_marca.setText("");
-        //    tf_cantidad.setText("");
         tf_modelo.setText("");
-        //   tf_precio.setText("");
         lb_imagen.setIcon(null);
         cbx_componente.setSelectedIndex(0);
         cbx_capacidad.removeAllItems();
         cbx_velocidad.removeAllItems();
         ta_descripcion.setText("");
+        tf_clave.setText("");
     }
 
     private void mostrarMensaje(String mensaje) {
         JOptionPane.showMessageDialog(null, mensaje);
 
     }
+    
+    private static String generarClave() {
 
-
-    /* private void cargarCbxMotherboard() {
-        
-        List<PlacaMadre> placas = service.listarPlacas();
-        
-        //Agregar Marcas al combo box
-        Set<String> marcas = new HashSet<>();
-        
-        placas.forEach(p -> marcas.add(p.getMarca()));
-
-        marcas.forEach(x -> cbx_marcaC.addItem(x));
-        
-        List<String> modelos = new ArrayList<>();
-        
-        cbx_marcaC.addActionListener(e -> {
-            
-            String marcaSelecionada = cbx_marcaC.getSelectedItem().toString();
-            placas.stream()
-                    .filter(placa -> placa.getMarca().equals(marcaSelecionada))
-                    .forEach(x -> modelos.add(x.getModelo()));
-            
-            cargarCbxModelo(modelos.toArray());
-            modelos.clear();
-            
-        });
+        return "C" + String.valueOf(Math.round(Math.random() * 10000)) + "E";
 
     }
 
-    private void cargarCbxModelo(Object[] modelos) {
-        cbx_modeloC.removeAllItems();
-       
-        Arrays.stream(modelos).forEach(x -> cbx_modeloC.addItem(x.toString()));
-    }*/
 }

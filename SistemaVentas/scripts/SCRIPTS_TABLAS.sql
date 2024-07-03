@@ -1,4 +1,4 @@
--- Active: 1718856057277@@127.0.0.1@3306
+-- Active: 1714257401294@@127.0.0.1@3306@bd_sistema_ventas
 -- crear nuestra base de datos
 
 create database bd_sistema_ventas;
@@ -51,6 +51,9 @@ CREATE TABLE tb_componente(
 	imagen BLOB,
 	descripcion TEXT,
 	fechaCreacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  idProveedor BIGINT,
+  CONSTRAINT fk_cidProveedor FOREIGN KEY (idProveedor) REFERENCES tb_proveedor(idProveedor)
+
 );
 
 CREATE TABLE tb_laptop(
@@ -69,6 +72,8 @@ CREATE TABLE tb_laptop(
 	imagen BLOB,
 	descripcion TEXT,
 	fechaCreacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+
 );
 
 CREATE TABLE tb_accesorios (
@@ -81,6 +86,7 @@ CREATE TABLE tb_accesorios (
 	descripcion VARCHAR(100),
 	fechaCreacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 CREATE INDEX idx_claveComponente ON tb_componente (claveComponente);
 
 CREATE TABLE tb_computadora(
@@ -113,7 +119,6 @@ CREATE TABLE tb_computadora(
     CONSTRAINT fk_ventiladores FOREIGN KEY (ventiladores) REFERENCES tb_componente(claveComponente)
 );
 
-
 CREATE TABLE tb_productos(
 	idp BIGINT AUTO_INCREMENT PRIMARY KEY,
 	claveProducto VARCHAR(10),
@@ -130,25 +135,6 @@ CREATE TABLE tb_productos(
 	CONSTRAINT fk_Proveedor FOREIGN KEY(idProveedor) REFERENCES tb_proveedor(idProveedor),
 	CONSTRAINT fk_Usuario FOREIGN KEY(idUsuario) REFERENCES tb_usuario(idUsuario)
 );
-
-CREATE TABLE tb_transacciones(
-	idTransaccion BIGINT AUTO_INCREMENT PRIMARY KEY,
-	montoTotal DOUBLE,
-	montoPagado DOUBLE,
-	tipoPago VARCHAR(50),
-	estadoPago VARCHAR(50),
-	fechaLimite DATE,
-	plazos VARCHAR(20),
-	observaciones TEXT,
-	id_Proveedor BIGINT,
-	id_Usuario BIGINT,
-	id_Producto INTEGER,
-	fechaRegistro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	CONSTRAINT fk_TProveedor FOREIGN KEY(id_Proveedor) REFERENCES tb_proveedor(idProveedor),
-	constraint fk_TProduccto FOREIGN KEY(id_Producto) REFERENCES 
-	CONSTRAINT fk_TUsuario FOREIGN KEY(id_Usuario) REFERENCES tb_usuario(idUsuario)
-);
-
 
 CREATE TABLE tb_cliente (
     idCliente BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -189,6 +175,34 @@ CREATE TABLE tb_factura (
     CONSTRAINT fk_Fventa  FOREIGN KEY (idVenta) REFERENCES tb_ventas(idVenta)
 );
 
+CREATE TABLE tb_htransacciones(
+  idTransaccion BIGINT AUTO_INCREMENT PRIMARY KEY,
+  nombreProducto VARCHAR(100),
+  cantidad INTEGER,
+  montoTotal DOUBLE,
+  montoPagado DOUBLE,
+  tipoPago VARCHAR(50),
+  estadoPago VARCHAR(50),
+  observaciones TEXT,
+  fechaCreacion DATE,
+  tipoConsulta VARCHAR(15),
+  id_Proveedor BIGINT,
+  id_Usuario BIGINT,
+  CONSTRAINT fk_TProveedor FOREIGN KEY (id_Proveedor) REFERENCES tb_proveedor(idProveedor),
+  CONSTRAINT fk_TUsuario FOREIGN KEY (id_Usuario) REFERENCES tb_usuario(idUsuario)
+);
+
+
+
+CREATE TRIGGER insert_Transaction
+AFTER INSERT OR UPDATE ON tb_accesorios
+FOR EACH ROW
+BEGIN
+
+
+
+
+END;
 
 
 

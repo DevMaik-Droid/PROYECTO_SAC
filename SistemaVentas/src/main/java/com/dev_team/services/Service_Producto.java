@@ -171,7 +171,7 @@ public class Service_Producto implements I_Service {
     }
 
     @Override
-    public boolean actualizar(Object objeto, String L) {
+    public boolean actualizar(Object objeto) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

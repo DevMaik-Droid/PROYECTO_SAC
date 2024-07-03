@@ -91,11 +91,11 @@ public class Service_Usuario implements I_Service {
     
     // Metodo para actulizar el registro
     @Override
-    public boolean actualizar(Object objeto, String clave) {
+    public boolean actualizar(Object objeto) {
        boolean respuesta = false;
        Usuario usuario = (Usuario) objeto;
         Connection cn = Conexion.conectar();
-        String sql = String.format("update %s set nombre=?, apellido = ?,fecha_nacimiento = ?, telefono = ?, direccion = ?, usuario = ?, contrasenia= ?, foto = ?, estado = ? where clave ='" + clave + "'", TABLA);
+        String sql = String.format("update %s set nombre=?, apellido = ?,fecha_nacimiento = ?, telefono = ?, direccion = ?, usuario = ?, contrasenia= ?, foto = ?, estado = ?, nivel = ? where clave ='" + usuario.getClave() + "'", TABLA);
         try {
 
             PreparedStatement consulta = cn.prepareStatement(sql);
@@ -108,6 +108,7 @@ public class Service_Usuario implements I_Service {
             consulta.setString(7, usuario.getPassword());
             consulta.setBinaryStream(8, usuario.getFoto());
             consulta.setString(9, usuario.getEstado());
+            consulta.setString(10, usuario.getNivel());
 
             if (consulta.executeUpdate() > 0) {
                 respuesta = true;

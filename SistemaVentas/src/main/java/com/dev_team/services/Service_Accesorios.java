@@ -27,14 +27,15 @@ public class Service_Accesorios implements I_Service {
 
         Connection cnt = Conexion.conectar();
         Accesorios accesorios = (Accesorios) objeto;
-        String sql = String.format("INSERT INTO %s VALUES (?,?,?,?,?,?,?,?,?,?)", TABLA);
+        String sql = String.format("INSERT INTO %s (claveAccesorio, nombre, marca, modelo, imagen, descripcion) VALUES (?,?,?,?,?,?)", TABLA);
 
         try (PreparedStatement pst = cnt.prepareStatement(sql)) {
-            pst.setInt(1, 0);//id
+            pst.setString(1, accesorios.getClaveAccesorio());
             pst.setString(2, accesorios.getNombre());
             pst.setString(3, accesorios.getMarca());
-            pst.setString(4, accesorios.getDescripcion());
-            pst.setBinaryStream(10, accesorios.getImagen());
+            pst.setString(4, accesorios.getModelo());
+            pst.setBinaryStream(5, accesorios.getImagen());
+            pst.setString(6, accesorios.getDescripcion());
 
             return pst.executeUpdate() > 0;
         } catch (Exception e) {
@@ -45,7 +46,7 @@ public class Service_Accesorios implements I_Service {
     }
 
     @Override
-    public boolean actualizar(Object objeto, String L) {
+    public boolean actualizar(Object objeto) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
