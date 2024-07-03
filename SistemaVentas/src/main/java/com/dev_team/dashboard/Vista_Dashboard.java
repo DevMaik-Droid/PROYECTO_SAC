@@ -9,6 +9,7 @@ import com.dev_team.controllers.GestionProductosController;
 import com.dev_team.controllers.GestionUsuarioController;
 import com.dev_team.controllers.ProveedorController;
 import com.dev_team.controllers.GestionProveedorController;
+import com.dev_team.controllers.LaptopController;
 import com.dev_team.controllers.RegistrarProductoController;
 import com.dev_team.controllers.UsuarioController;
 import com.dev_team.controllers.VentasController;
@@ -175,7 +176,9 @@ public class Vista_Dashboard extends javax.swing.JFrame {
                 V_RegistrarComputadora computadora = new ComputadoraController();
                 showForm(computadora);
             } else if (index == 3 && indexSubMenu == 2) {
-                showForm(new V_RegistrarLaptop());
+                V_RegistrarLaptop laptop = new LaptopController();
+                showForm(laptop);
+                
             } else if (index == 3 && indexSubMenu == 3) {
                 V_RegistrarAccesorios accesorios = new AccesorioController();
                 showForm(accesorios);

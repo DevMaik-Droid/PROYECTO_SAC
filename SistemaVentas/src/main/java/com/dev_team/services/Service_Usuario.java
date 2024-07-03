@@ -141,7 +141,9 @@ public class Service_Usuario implements I_Service {
                 us.setDireccion(rst.getString("direccion"));
                 us.setUsuario(rst.getString("usuario"));
                 us.setPassword(rst.getString("contrasenia"));
+                
                 us.setBytes_image(rst.getBytes("foto"));
+                
                 us.setClave(rst.getString("clave"));
                 us.setEstado(rst.getString("estado"));
                 us.setObservaciones(rst.getString("observaciones"));
@@ -155,4 +157,6 @@ public class Service_Usuario implements I_Service {
        
         return lista_usuarios;
     }
+    
+    
 }

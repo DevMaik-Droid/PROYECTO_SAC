@@ -3,10 +3,14 @@ package com.dev_team.controllers;
 import com.dev_team.dashboard.Vista_Dashboard;
 import com.dev_team.models.Accesorios;
 import com.dev_team.models.Componente;
+import com.dev_team.models.Computadora;
+import com.dev_team.models.Laptop;
 import com.dev_team.models.Producto;
 import com.dev_team.models.Proveedor;
 import com.dev_team.services.Service_Accesorios;
 import com.dev_team.services.Service_Componente;
+import com.dev_team.services.Service_Computadora;
+import com.dev_team.services.Service_Laptop;
 import com.dev_team.services.Service_Producto;
 import com.dev_team.services.Service_Proveedor;
 import com.dev_team.utilidades.Utilidad;
@@ -79,7 +83,7 @@ public class RegistrarProductoController extends V_RegistrarProducto {
         if (!tf_precioUnitario.getText().isEmpty() && !tf_cantidad.getText().isEmpty()) {
             double precioUnitario = Double.parseDouble(tf_precioUnitario.getText());
             int cantidad = Integer.parseInt(tf_cantidad.getText());
-            tf_precioTotal.setText((precioUnitario * cantidad) + "");
+            tf_precioTotal.setText(String.format("%.2f",(precioUnitario * cantidad)));
         }else{
             tf_precioTotal.setText("0");
         }
@@ -99,8 +103,18 @@ public class RegistrarProductoController extends V_RegistrarProducto {
             List<Accesorios> lista_producto = (List<Accesorios>) svc.listarClaves();
             lista_producto.forEach(x -> cbx_clave.addItem(x.getClaveAccesorio()));
 
-        } else {
-
+        }else if (categoria.equalsIgnoreCase("LAPTOP")) {
+            Service_Laptop svc = new Service_Laptop();
+            List<Laptop> lista_producto = (List<Laptop>) svc.listarClaves();
+            lista_producto.forEach(x -> cbx_clave.addItem(x.getClaveLaptop()));
+        }
+        else if (categoria.equalsIgnoreCase("COMPUTADORA")) {
+            Service_Computadora svc = new Service_Computadora();
+            List<Computadora> lista_producto = (List<Computadora>) svc.listar();
+            lista_producto.forEach(x -> cbx_clave.addItem(x.getClaveComputadora()));
+        }
+        else {
+            
         }
     }
 
@@ -111,6 +125,7 @@ public class RegistrarProductoController extends V_RegistrarProducto {
                 .forEach(x -> cbx_proveedor.addItem(x));
     }
 
+    
     private void generarTexto(String clave, String categoria) {
         String txt = "";
         System.out.println(clave);
@@ -128,8 +143,56 @@ public class RegistrarProductoController extends V_RegistrarProducto {
             tf_nombreProducto.setText(accesorios.getNombre());
             txt =  " -Marca: " + accesorios.getMarca()
                     + "\n -Modelo: " + accesorios.getModelo();
+        }else if (categoria.equalsIgnoreCase("Laptop")) {
+            Service_Laptop svc = new Service_Laptop();
+            Laptop laptop = svc.buscarLaptop(clave);
+            tf_nombreProducto.setText(laptop.getNombre());
+            txt =  " -Marca: " + laptop.getMarca()
+                    + "\n -Modelo: " + laptop.getModelo()
+                    + "\n -Procesador: " + laptop.getProcesador()
+                    + "\n -Memoria RAM: " + laptop.getMemoriaRam()
+                    + "\n -Almacenamiento: " + laptop.getAlmacenamiento()
+                    + "\n -TarjetaGrafica: " + laptop.getTarjetaGrafica()
+                    + "\n -Pantalla: " + laptop.getPantalla();
+        }else if (categoria.equalsIgnoreCase("Computadora")) {
+            Service_Computadora svc = new Service_Computadora();
+            Computadora computadora = svc.buscarComputadora(clave);
+            List<Componente> lista_componentes = (List<Componente>) new Service_Componente().listar();
+            
+            tf_precioUnitario.setText(computadora.getPrecio()+"");
+            tf_precioUnitario.setEditable(false);
+            tf_nombreProducto.setText(computadora.getNombre());
+            txt =  "\n -Procesador: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getProcesador())).findFirst().get().toString()
+                    
+                    + "\n -TarjetaGrafica: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getTarjeta())).findFirst().get().toString()
+                    
+                    + "\n -Placa Madre: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getPlacaMadre())).findFirst().get().toString()
+                    
+                    + "\n -Memoria RAM: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getMemoriaRam())).findFirst().get().toString()
+                    
+                    + "\n -Pantalla: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getMonitor())).findFirst().get().toString()
+                    
+                    + "\n -Almacenamiento: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getAlmacenamiento())).findFirst().get().toString()
+                    
+                    + "\n -Fuente: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getFuente())).findFirst().get().toString()
+                    
+                    + "\n -Case: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getCcase())).findFirst().get().toString()
+                    
+                    + "\n -Disipador: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getDisipador())).findFirst().get().toString()
+                    
+                    + "\n -Ventilador: " + lista_componentes.stream().filter(x -> x.getClave()
+                            .equals(computadora.getVentilador())).findFirst().get().toString();
         }
-
+       
         ta_detalle.setText(txt);
     }
 

@@ -106,7 +106,6 @@ public class Service_Accesorios implements I_Service {
             System.out.println("Error listar Componentes: ".concat(e.getMessage()));
         }
         return accesorio;
-
     }
 
     @Override

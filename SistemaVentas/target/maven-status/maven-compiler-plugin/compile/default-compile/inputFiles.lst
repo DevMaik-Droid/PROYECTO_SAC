@@ -3,6 +3,7 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\ComponentController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarAccesorios.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmUsuario.java
+C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_Computadora.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\JXTableRenderer.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\GestionProveedorController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_Ventas.java
@@ -12,6 +13,7 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\Utilidad.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\GradientSeparador.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarLaptop.java
+C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_Laptop.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_Dashboard.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\Accesorios.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\Table_Cell_Render.java
@@ -20,6 +22,7 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\dashboard\menu\EventMenuSelected.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmiLaptop.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarUsuario.java
+C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\Computadora.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\ComponentChartsControllers.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\MultilineaCellRenderer.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarComponentes.java
@@ -45,6 +48,7 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\GradientDialog.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\Panel_Round.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\dashboard\Form_Empty.java
+C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\Laptop.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\LaptopController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_GestionarProductos.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\PlacaMadre.java

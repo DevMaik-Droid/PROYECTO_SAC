@@ -112,6 +112,7 @@ public class Service_Componente implements I_Service {
 
             while (rst.next()) {
                 componente = new Componente();
+                componente.setClave(rst.getString("claveComponente"));
                 componente.setNombre(rst.getString("nombre"));
                 componente.setMarca(rst.getString("marca"));
                 componente.setModelo(rst.getString("modelo"));

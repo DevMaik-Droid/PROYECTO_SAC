@@ -11,11 +11,6 @@ import java.util.List;
 
 public class Service_Producto implements I_Service {
 
-    /**
-     * ********************************************************************
-     * metodo para consultar si el producto ya esta registrado en la BBDDcomo
-     * ********************************************************************
-     */
     
     private final String TABLA = "tb_productos";
     

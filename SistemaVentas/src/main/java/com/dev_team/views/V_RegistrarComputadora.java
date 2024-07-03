@@ -1,6 +1,7 @@
 package com.dev_team.views;
 
 import com.dev_team.models.Componente;
+import com.dev_team.models.Producto;
 import com.dev_team.utilidades.ComboBoxRender;
 import com.dev_team.utilidades.JButtonRound;
 import com.dev_team.utilidades.Main_Colores;
@@ -39,7 +40,7 @@ public class V_RegistrarComputadora extends JPanel {
         panelTitle = new PanelGradient(Color.YELLOW, Color.GREEN);
         jLabel17 = new javax.swing.JLabel();
         panel_form = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
+        lb_imagen = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -50,7 +51,7 @@ public class V_RegistrarComputadora extends JPanel {
         jLabel8 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        ta_descripcion = new javax.swing.JTextArea();
         btn_buscar = new JButtonRound("Buscar",20);
         cbx_ramCO = new javax.swing.JComboBox<>();
         cbx_tarjetaMadre = new javax.swing.JComboBox<>();
@@ -68,6 +69,8 @@ public class V_RegistrarComputadora extends JPanel {
         cbx_gpu = new javax.swing.JComboBox<>();
         jLabel20 = new javax.swing.JLabel();
         cbx_fuente = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        tf_costo_total = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(51, 51, 51));
 
@@ -88,9 +91,9 @@ public class V_RegistrarComputadora extends JPanel {
         panel_form.setOpaque(false);
         panel_form.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel10.setOpaque(true);
-        panel_form.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 190, 170));
+        lb_imagen.setBackground(new java.awt.Color(255, 255, 255));
+        lb_imagen.setOpaque(true);
+        panel_form.add(lb_imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 190, 170));
 
         jLabel2.setFont(new java.awt.Font("Bahnschrift", 0, 20)); // NOI18N
         jLabel2.setForeground(Main_Colores.C_100);
@@ -139,12 +142,12 @@ public class V_RegistrarComputadora extends JPanel {
         jLabel14.setText("Nombre:");
         panel_form.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 60, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        jTextArea1.setForeground(Main_Colores.Fondo);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(null);
-        jScrollPane1.setViewportView(jTextArea1);
+        ta_descripcion.setColumns(20);
+        ta_descripcion.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        ta_descripcion.setForeground(Main_Colores.Fondo);
+        ta_descripcion.setRows(5);
+        ta_descripcion.setBorder(null);
+        jScrollPane1.setViewportView(ta_descripcion);
 
         panel_form.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 430, 470, 130));
 
@@ -247,6 +250,12 @@ public class V_RegistrarComputadora extends JPanel {
         cbx_fuente.setForeground(Main_Colores.Fondo);
         panel_form.add(cbx_fuente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 230, 30));
 
+        jLabel21.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        jLabel21.setForeground(Main_Colores.C_100);
+        jLabel21.setText("Costo Total:");
+        panel_form.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
+        panel_form.add(tf_costo_total, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 200, 40));
+
         panel_main.add(panel_form, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -285,8 +294,8 @@ public class V_RegistrarComputadora extends JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_buscar;
-    private javax.swing.JButton btn_registrar;
+    protected javax.swing.JButton btn_buscar;
+    protected javax.swing.JButton btn_registrar;
     protected javax.swing.JComboBox<Componente> cbx_caseCO;
     protected javax.swing.JComboBox<Componente> cbx_discoCO;
     protected javax.swing.JComboBox<Componente> cbx_disipadores;
@@ -297,7 +306,6 @@ public class V_RegistrarComputadora extends JPanel {
     protected javax.swing.JComboBox<Componente> cbx_ramCO;
     protected javax.swing.JComboBox<Componente> cbx_tarjetaMadre;
     protected javax.swing.JComboBox<Componente> cbx_ventiladores;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -307,16 +315,19 @@ public class V_RegistrarComputadora extends JPanel {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    protected javax.swing.JLabel lb_imagen;
     private javax.swing.JPanel panelTitle;
     protected javax.swing.JPanel panel_form;
     private javax.swing.JPanel panel_main;
-    private javax.swing.JTextField tf_nombreCO;
+    protected javax.swing.JTextArea ta_descripcion;
+    protected javax.swing.JTextField tf_costo_total;
+    protected javax.swing.JTextField tf_nombreCO;
     // End of variables declaration//GEN-END:variables
 }
