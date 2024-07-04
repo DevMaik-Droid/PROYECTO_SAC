@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteService {
@@ -29,6 +30,10 @@ public class ClienteService {
         return clienteRepository.save(cliente);
     }
 
+    @Transactional
+    public Optional<Cliente> buscarNombreApellido(String nombre, String apellido) {
+        return clienteRepository.findByNombreAndApellido(nombre, apellido);
+    }
 
 
 
