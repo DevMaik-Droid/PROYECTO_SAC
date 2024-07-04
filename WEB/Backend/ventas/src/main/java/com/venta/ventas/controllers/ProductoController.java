@@ -2,6 +2,7 @@ package com.venta.ventas.controllers;
 
 
 import com.venta.ventas.models.Producto;
+import com.venta.ventas.services.ClienteService;
 import com.venta.ventas.services.ServiceProducto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,10 @@ public class ProductoController {
     @Autowired
     ServiceProducto serviceProducto;
 
+    @Autowired
+    ClienteService clienteService;
+
+
     @GetMapping("/listar")
     public List<Producto> obtenerProductos(){
         return serviceProducto.listar_productos();
@@ -32,5 +37,7 @@ public class ProductoController {
         }
         return ResponseEntity.notFound().build();
     }
+
+
 
 }

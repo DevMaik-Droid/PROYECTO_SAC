@@ -24,6 +24,22 @@
 .espacio {
 
 }
+
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50vh;
+    height: 40vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.61);
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size:25pt;
+    }
+}
+
 .caja{
     height: 700px;
 }

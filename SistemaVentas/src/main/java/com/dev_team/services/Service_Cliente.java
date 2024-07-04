@@ -37,11 +37,7 @@ public class Service_Cliente implements I_Service{
         return respuesta;
     }
 
-    /**
-     * ********************************************************************
-     * metodo para consultar si el producto ya esta registrado en la BBDD
-     * ********************************************************************
-     */
+ 
     public boolean existeCliente(String cedula) {
         boolean respuesta = false;
         String sql = "select cedula from tb_cliente where cedula = '" + cedula + "';";
@@ -59,11 +55,8 @@ public class Service_Cliente implements I_Service{
         return respuesta;
     }
 
-    /**
-     * **************************************************
-     * metodo para actualizar un cliente
-     * **************************************************
-     */
+   
+    
     public boolean actualizar(Cliente objeto, int idCliente) {
         boolean respuesta = false;
         Connection cn = Conexion.conectar();
@@ -87,11 +80,7 @@ public class Service_Cliente implements I_Service{
         return respuesta;
     }
 
-    /**
-     * **************************************************
-     * metodo para eliminar un cliente
-     * **************************************************
-     */
+
     public boolean eliminar(int idCliente) {
         boolean respuesta = false;
         Connection cn = Conexion.conectar();

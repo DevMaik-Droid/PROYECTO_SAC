@@ -9,3 +9,15 @@
     width: 70px;  /* Asegura que la imagen sea cuadrada */
     border-radius: 50%; /* Hace que la imagen sea redonda */
 }
+
+.item:focus {
+    color: aqua; /* Cambia el color cuando se enfoca el elemento */
+  }
+  
+  .item:focus ~ .item {
+    color: black; /* Restablece el color de todos los elementos hermanos al elemento enfocado */
+  }
+  
+  .item:focus {
+    z-index: 1; /* Añade profundidad para asegurar que el elemento enfocado se superponga correctamente */
+  }
