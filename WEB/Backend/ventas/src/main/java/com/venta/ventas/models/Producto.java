@@ -16,7 +16,7 @@ public class Producto {
     private Long idProducto;
 
     @Column(name="claveProducto")
-    private String claveproducto;
+    private String claveProducto;
 
     @Column(name = "nombreProducto")
     private String nombreProducto;
@@ -25,10 +25,10 @@ public class Producto {
     private String categoriaProducto;
 
     @Column(name = "precioUnitario")
-    private String precioUnitario;
+    private Double precioUnitario;
 
     @Column(name = "stock")
-    private String stock;
+    private Integer stock;
 
     @Column(name = "precioTotal")
     private Double precioTotal;

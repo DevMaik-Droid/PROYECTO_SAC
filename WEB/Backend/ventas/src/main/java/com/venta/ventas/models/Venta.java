@@ -2,8 +2,10 @@ package com.venta.ventas.models;
 
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
+@Data
 @Table(name = "tb_ventas_web")
 public class Venta {
 
@@ -13,7 +15,7 @@ public class Venta {
     private Integer cantidad;
     private Double precioUnitario;
     private Double total;
-    private Long idCliete;
-    private Long idProducto;
+    private Long idCliente;
+    private String claveP;
 
 }
