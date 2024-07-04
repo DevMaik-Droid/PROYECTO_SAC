@@ -27,3 +27,24 @@
 .caja{
     height: 700px;
 }
+.bgImg{
+    background: brown !important;
+}
+.descripcion{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.61);
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-size:25pt;
+    }
+
+}
+.fondo2{
+    background: rgb(255, 255, 255);
+}
