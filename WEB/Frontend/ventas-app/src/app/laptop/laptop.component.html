@@ -81,7 +81,7 @@
             </a>
             <div class="px-5 pb-5">
                 <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">La MSI Katana cuenta con un procesador Intel Core i7-12700H y una GPU NVIDIA GeForce RTX 3060. Con 16GB de RAM y un SSD NVMe 
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white" id="detalleLaptop1">La MSI Katana cuenta con un procesador Intel Core i7-12700H y una GPU NVIDIA GeForce RTX 3060. Con 16GB de RAM y un SSD NVMe 
                         de 512GB, ofrece un rendimiento excelente para juegos en un diseño robusto y estilizado.</h5>
                 </a>
                 <div class="flex items-center mt-2.5 mb-5">
@@ -116,8 +116,8 @@
                         class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-white">Bs. 12000</span>
-                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white" id="precio_laptop1">Bs. 12000</span>
+                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" (click)="obtenerElementos('detalleLaptop1','precio_laptop1')"
                     class="block text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     type="button">
                     Adquirir
@@ -135,7 +135,7 @@
             </a>
             <div class="px-5 pb-5">
                 <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">La MSI Cyborg está equipada con un procesador AMD Ryzen 9 6900HX y una GPU NVIDIA GeForce 
+                    <h5 id="laptop1" class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white" id="detalleLaptop2">La MSI Cyborg está equipada con un procesador AMD Ryzen 9 6900HX y una GPU NVIDIA GeForce 
                         RTX 3070. Con 32GB de RAM y un SSD NVMe de 1TB, garantiza una experiencia de juego fluida en un chasis futurista y compacto.</h5>
                 </a>
                 <div class="flex items-center mt-2.5 mb-5">
@@ -170,8 +170,8 @@
                         class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-white">Bs. 9700</span>
-                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white" id="precio_laptop2">Bs. 9700</span>
+                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" (click)="obtenerElementos('detalleLaptop2','precio_laptop2')"
                     class="block text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     type="button">
                     Adquirir
@@ -189,7 +189,7 @@
             </a>
             <div class="px-5 pb-5">
                 <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">La Dell Alienware incluye un procesador Intel Core i9-12900HK y una GPU NVIDIA GeForce RTX 3080. Con 32GB de RAM y un SSD NVMe de 2TB,
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white" id="detalleLaptop3">La Dell Alienware incluye un procesador Intel Core i9-12900HK y una GPU NVIDIA GeForce RTX 3080. Con 32GB de RAM y un SSD NVMe de 2TB,
                         proporciona un rendimiento superior en un diseño icónico y agresivo.</h5>
                 </a>
                 <div class="flex items-center mt-2.5 mb-5">
@@ -224,8 +224,8 @@
                         class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-white">Bs. 14500</span>
-                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white" id="precio_laptop3">Bs. 14500</span>
+                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" (click)="obtenerElementos('detalleLaptop3','precio_laptop3')"
                     class="block text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     type="button">
                     Adquirir
@@ -243,7 +243,7 @@
             </a>
             <div class="px-5 pb-5">
                 <a href="#">
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">La Acer Predator viene con un procesador Intel Core i7-11800H y una GPU NVIDIA GeForce RTX 3060. Con 16GB de RAM y un SSD NVMe de 1TB, 
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white" id="detalleLaptop4">La Acer Predator viene con un procesador Intel Core i7-11800H y una GPU NVIDIA GeForce RTX 3060. Con 16GB de RAM y un SSD NVMe de 1TB, 
                         segura juegos rápidos en un chasis robusto con iluminación RGB.</h5>
                 </a>
                 <div class="flex items-center mt-2.5 mb-5">
@@ -278,8 +278,8 @@
                         class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
                 </div>
                 <div class="flex items-center justify-between">
-                    <span class="text-3xl font-bold text-gray-900 dark:text-white">Bs. 13500</span>
-                    <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
+                    <span class="text-3xl font-bold text-gray-900 dark:text-white" id="precio_laptop4">Bs. 13500</span>
+                    <button (click)="obtenerElementos('detalleLaptop4', 'precio_laptop4')" data-modal-target="crud-modal" data-modal-toggle="crud-modal"
                     class="block text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     type="button">
                     Adquirir
@@ -388,7 +388,7 @@
             <!-- Modal header -->
             <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                    Producto Seleccionado
+                    Adquirir Producto
                 </h3>
                 <button type="button"
                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
@@ -402,43 +402,92 @@
                 </button>
             </div>
             <!-- Modal body -->
-            <form class="p-4 md:p-5">
+            <form class="p-4 md:p-5" [formGroup]="form" (submit)="realizarVenta()">
                 <div class="grid gap-4 mb-4 grid-cols-2">
                     <div class="col-span-2">
                         <label for="name"
                             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre:</label>
-                        <input type="text" name="name" id="name"
+                        <input type="text" name="name" id="name" 
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="Introdzca su nombre" required="">
+                            placeholder="Introdzca su nombre" required="" formControlName="nombre">
                     </div>
+
+                    <div class="col-span-2">
+                        <label for="apellido"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Apellido:</label>
+                        <input type="text" name="name" id="apellido"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Introdzca su nombre" required="" formControlName="apellido">
+                    </div>
+
+                    <div class="col-span-2">
+                        <label for="correo"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo:</label>
+                        <input type="email" name="name" id="correo"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="example@gmail.com" required="" formControlName="correoElectronico">
+                    </div>
+
                     <div class="col-span-2 sm:col-span-1">
-                        <label for="price"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cantidad:</label>
-                        <input type="number" name="price" id="price"
+                        <label for="telefono"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Telefono:</label>
+                        <input type="number" name="name" id="telefono"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                            placeholder="0" required="">
+                            placeholder="765xxx574" formControlName="telefono">
                     </div>
+
                     <div class="col-span-2 sm:col-span-1">
                         <label for="category"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoria:</label>
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Departamento:</label>
                         <select id="category"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                            <option selected="">Seleccione categoria</option>
-                            <option value="TV">Computadoras</option>
-                            <option value="PC">Laptops</option>
-                            <option value="GA">Componentes</option>
-                            <option value="PH">Accesorios</option>
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" formControlName="departamento">
+                            <option selected="">Seleccione Departamento</option>
+                            <option value="LP">La Paz</option>
+                            <option value="CBBA">Cochabamba</option>
+                            <option value="STZ">Santa Cruz</option>
+                            <option value="OR">Oruro</option>
+                            <option value="PT">Potosi</option>
+                            <option value="PD">Pando</option>
+                            <option value="BN">Beni</option>
+                            <option value="TR">Tarija</option>
+                            <option value="CHQ">Chuquisaca</option>
+                            
                         </select>
                     </div>
+
                     <div class="col-span-2">
-                        <label for="description"
-                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripcion</label>
-                        <textarea id="description" rows="4"
+                        <label for="correo"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Direccion:</label>
+                        <input type="email" name="name" id="correo"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="Av. VV, Z. zz , Nº X" required="" formControlName="direccion">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="precioModal"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Precio:</label>
+                        <input type="text" name="precioModal" id="precioModal"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            required="" formControlName="precioUnitario">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="cantidad"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Cantidad:</label>
+                        <input type="number" name="cantidad" id="cantidad"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                            placeholder="0" required="" formControlName="stock">
+                    </div>
+                    
+                    <div class="col-span-2">
+                        <label for="detalle"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Detalle</label>
+                        <textarea id="detalle" rows="4"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-red-500 focus:border-red-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-red-500 dark:focus:border-red-500"
-                            placeholder=""></textarea>
+                            placeholder="" formControlName="claveProducto"></textarea>
                     </div>
                 </div>
-                <button type="submit"
+                <button
                     class="text-white inline-flex items-center bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
                     <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -446,7 +495,7 @@
                             d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
                             clip-rule="evenodd"></path>
                     </svg>
-                    Adquirir Producto
+                    Comprar
                 </button>
             </form>
         </div>

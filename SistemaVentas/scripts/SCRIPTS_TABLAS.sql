@@ -72,8 +72,6 @@ CREATE TABLE tb_laptop(
 	imagen BLOB,
 	descripcion TEXT,
 	fechaCreacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-
-
 );
 
 CREATE TABLE tb_accesorios (
@@ -162,6 +160,18 @@ CREATE TABLE tb_ventas (
     CONSTRAINT fk_Vcliente FOREIGN KEY (idCliente) REFERENCES tb_cliente(idCliente),
     CONSTRAINT fk_Vproducto FOREIGN KEY (idProducto) REFERENCES tb_productos(idp),
     CONSTRAINT fk_Vusuario FOREIGN KEY (idUsuario) REFERENCES tb_usuario(idUsuario)
+);
+CREATE UNIQUE INDEX idx_claveProducto ON tb_productos(claveProducto);
+CREATE TABLE tb_ventas_web (
+    idVenta BIGINT AUTO_INCREMENT PRIMARY KEY,
+    cantidad INTEGER NOT NULL,
+    precioUnitario DECIMAL(10, 2) NOT NULL,
+    total DECIMAL(10, 2) NOT NULL,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    idCliente BIGINT,
+    claveP VARCHAR(10),
+    CONSTRAINT fk_VWcliente FOREIGN KEY (idCliente) REFERENCES tb_cliente(idCliente),
+    CONSTRAINT fk_VWproducto FOREIGN KEY (claveP) REFERENCES tb_productos(claveProducto)
 );
 
 CREATE TABLE tb_factura (
