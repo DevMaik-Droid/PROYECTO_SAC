@@ -11,9 +11,6 @@ package com.dev_team.views;
 public class D_Transaccion extends javax.swing.JDialog {
 
 
-    
-    
-    
     public D_Transaccion(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();

@@ -144,6 +144,24 @@ public class Service_Producto implements I_Service {
         }
         return false;
     }
+    
+    public Boolean actualizarStock(Producto producto) {
+    Connection cn = Conexion.conectar();
+    String sql = "UPDATE " + TABLA + " SET stock = stock + ?, precioTotal = precioTotal + ?, disponibilidad = ? WHERE claveProducto = ?";
+
+    try (PreparedStatement pst = cn.prepareStatement(sql)) {
+        pst.setInt(1, producto.getStock());
+        pst.setDouble(2, producto.getPrecioTotal());
+        pst.setString(3, "DISPONIBLE");
+        pst.setString(4, producto.getClaveProducto());
+
+        return pst.executeUpdate() > 0;
+    } catch (SQLException e) {
+        System.out.println("error en actualizar stock: " + e);
+    }
+    return false;
+}
+
             
 
     @Override

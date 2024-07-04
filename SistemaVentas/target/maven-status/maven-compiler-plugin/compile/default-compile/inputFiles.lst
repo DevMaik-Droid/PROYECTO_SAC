@@ -20,8 +20,8 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarProveedor.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\Proveedor.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\dashboard\menu\EventMenuSelected.java
-C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmiLaptop.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarUsuario.java
+C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmProductos.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\Computadora.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\ComponentChartsControllers.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\utilidades\MultilineaCellRenderer.java
@@ -37,7 +37,6 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\GestionUsuarioController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_Usuario.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_Cliente.java
-C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmiComponentes.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\CabeceraVenta.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\Transaccion.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_Accesorios.java
@@ -54,7 +53,6 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\PlacaMadre.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmProveedor.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\dashboard\menu\MenuItem.java
-C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmiComputadoras.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\AccesorioController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\Main.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_GestionarProveedores.java
@@ -77,7 +75,6 @@ C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\services\Service_RegistrarVenta.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\V_RegistrarComputadora.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\models\DetalleVenta.java
-C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\views\D_AdmiAccesorios.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\GestionProductosController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\DashBoadController.java
 C:\Users\DevMaik\Documents\ProyectosGit\PROYECTO_SAC\SistemaVentas\src\main\java\com\dev_team\controllers\UsuarioController.java

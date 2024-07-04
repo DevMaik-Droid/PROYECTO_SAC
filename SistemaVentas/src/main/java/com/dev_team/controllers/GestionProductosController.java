@@ -7,6 +7,7 @@ import com.dev_team.services.Service_Producto;
 import com.dev_team.services.Service_Proveedor;
 import com.dev_team.utilidades.Table_Cell_Render;
 import com.dev_team.utilidades.Table_Header_Render;
+import com.dev_team.views.D_AdmProductos;
 import com.dev_team.views.D_AdmProveedor;
 import com.dev_team.views.V_GestionarProductos;
 import java.awt.event.MouseAdapter;
@@ -32,7 +33,7 @@ public class GestionProductosController extends V_GestionarProductos{
         lista_productos = (List<Producto>) service.listar();
         GenerarTabla(lista_productos);
 
-        /*tabla_productos.addMouseListener(new MouseAdapter() {
+        tabla_productos.addMouseListener(new MouseAdapter() {
 
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -49,6 +50,7 @@ public class GestionProductosController extends V_GestionarProductos{
             }
 
         });
+        /*
 
         tf_filtrar.getDocument().addDocumentListener(new DocumentListener() {
             @Override
@@ -142,21 +144,21 @@ public class GestionProductosController extends V_GestionarProductos{
         tabla_productos.setDefaultEditor(Object.class, null);
     }
 
-    /*private void abrirDialogoUsuario(int fila, int columna) {
-        int id = Integer.parseInt(tabla_productos.getValueAt(fila, columna).toString());
+    private void abrirDialogoUsuario(int fila, int columna) {
+        String clave = tabla_productos.getValueAt(fila, columna).toString();
 
-        Proveedor proveedor = lista_productos.stream()
-                .filter(prov -> prov.getIdProveedor() == id)
+        Producto producto = lista_productos.stream()
+                .filter(pro -> pro.getClaveProducto().equals(clave))
                 .findFirst()
                 .orElse(null);
-        if (proveedor != null) {
-            abrirVentanaAdmUsuario(proveedor);
+        if (producto != null) {
+            abrirVentanaAdmUsuario(producto);
         }
 
-    }*/
+    }
 
-    private void abrirVentanaAdmUsuario(Proveedor proveedor) {
-        D_AdmProveedor dialog_usuario = new D_AdmProveedor(true, proveedor);
+    private void abrirVentanaAdmUsuario(Producto producto) {
+        D_AdmProductos dialog_usuario = new D_AdmProductos(true, producto);
         dialog_usuario.setVisible(true);
     }
 
