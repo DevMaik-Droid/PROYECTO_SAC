@@ -11,7 +11,7 @@
 }
 
 .item:focus {
-    color: aqua; /* Cambia el color cuando se enfoca el elemento */
+    color: red; /* Cambia el color cuando se enfoca el elemento */
   }
   
   .item:focus ~ .item {
